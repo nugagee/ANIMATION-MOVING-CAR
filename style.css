@@ -1,0 +1,122 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.sky {
+  position: absolute;
+  background: url("/image/sky.jpg") no-repeat center / cover;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+.highway {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  width: 500%;
+  background: url("/image/road.jpg") repeat-x center / cover;
+  animation: highway 3s linear infinite;
+}
+@keyframes highway {
+  100% {
+    transform: translateX(-1500px);
+  }
+}
+.city {
+  position: absolute;
+  bottom: 200px;
+  left: 0;
+  right: 0;
+  height: 200px;
+  width: 200%;
+  background: url("/image/city.png");
+  background-repeat: repeat-x;
+  animation: city 10s linear infinite;
+}
+@keyframes city {
+  100% {
+    transform: translateX(-700px);
+  }
+}
+.moto .car {
+  position: absolute;
+  bottom: 80px;
+  left: 38%;
+  transform: translatex(-50%);
+  height: 150px;
+  width: 320px;
+  animation: car 1s linear infinite;
+}
+@keyframes car {
+  100% {
+    transform: translateY(-1px);
+  }
+  50% {
+    transform: translateY(1px);
+  }
+  0% {
+    transform: translateY(-1px);
+  }
+}
+.tire {
+  position: absolute;
+  bottom: 150px;
+  left: 50%;
+  transform: translatex(-50%);
+}
+@keyframes tire {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.tire .wheel1 {
+  position: absolute;
+  right: 77px;
+  height: 60px;
+  width: 60px;
+  animation: tire 2s linear infinite;
+}
+.tire .wheel2 {
+  position: absolute;
+  left: 59px;
+  height: 60px;
+  width: 60px;
+  animation: tire 2s linear infinite;
+}
+h2 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translatex(-50%);
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.7em;
+}
+@media screen and (max-width: 1100px) {
+  .moto .car {
+    position: absolute;
+    bottom: 80px;
+    left: 35%;
+    transform: translatex(-50%);
+  }
+}
+@media screen and (max-width: 900px) {
+  .moto .car {
+    position: absolute;
+    bottom: 80px;
+    left: 30%;
+    transform: translatex(-50%);
+  }
+}
+@media screen and (max-width: 650px) {
+  .moto .car {
+    position: absolute;
+    bottom: 80px;
+    left: 24%;
+    transform: translatex(-50%);
+  }
+}
